@@ -1,0 +1,25 @@
+//Command To Start Mongo
+mongosh
+
+//Create New Database Named TestDB
+use TestDB
+
+//Check All The Databases
+show dbs / show databases
+
+// Insert
+db.students.insertOne({'name':'Rashed'});
+
+//Show All Documents
+db.students.find()
+
+//Show Single Document
+db.students.findOne({'name':'Rashed'})
+
+//update Single Doc
+db.students.updateOne({'name':'Rashed'},{$set:{'name':'Rashedul Islam'}})
+
+//Remove Single Doc
+db.students.deleteOne({'name':'Rashedul Islam'})
+
+
