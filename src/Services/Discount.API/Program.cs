@@ -1,3 +1,4 @@
+using Discount.API.Migrate_Database;
 using Discount.API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
+
+//var configuration = builder.Configuration;
+//MigrateDatabase.MigrateInitialDatabase(configuration);
 
 var app = builder.Build();
 
