@@ -2,4 +2,8 @@
 
 public class MappingProfile : Profile
 {
+    public MappingProfile()
+    {
+        CreateMap<Order, OrdersVm>().ReverseMap();
+    }
 }
