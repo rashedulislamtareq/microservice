@@ -1,6 +1,6 @@
 ﻿using Ordering.Application.Contracts.Persistence;
 
-namespace Ordering.Application.Features.Queries.GetOrdersList;
+namespace Ordering.Application.Features.Orders.Queries.GetOrdersList;
 
 public class GetOrdersListQueryHandler : IRequestHandler<GetOrdersListQuery, List<OrdersVm>>
 {

@@ -1,4 +1,4 @@
-﻿namespace Ordering.Application.Features.Queries.GetOrdersList;
+﻿namespace Ordering.Application.Features.Orders.Queries.GetOrdersList;
 
 public class GetOrdersListQuery : IRequest<List<OrdersVm>>
 {
