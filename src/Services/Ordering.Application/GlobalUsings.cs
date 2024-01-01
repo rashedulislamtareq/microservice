@@ -9,3 +9,4 @@ global using FluentValidation;
 global using Ordering.Application.Features.Orders.Commands.CheckoutOrder;
 global using Ordering.Application.Features.Orders.Commands.UpdateOrder;
 global using FluentValidation.Results;
+global using Microsoft.Extensions.DependencyInjection;
