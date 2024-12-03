@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		Docker Commands.txt = Docker Commands.txt
 		Docker Compose Commands.txt = Docker Compose Commands.txt
 		Mongo Commands.txt = Mongo Commands.txt
+		Redis Commands.txt = Redis Commands.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{02E0EF06-E52E-4847-847B-F99BB97A0A90}"
