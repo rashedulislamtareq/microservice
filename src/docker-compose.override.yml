@@ -1,76 +1,7 @@
-# version: '3.4'
-
-# services:
-#   catalogdb:
-#     container_name: catalogdb
-#     restart: always
-#     ports:
-#       - "27017:27017"
-#     volumes:
-#       - mongo_data:/data/db
-
-#   basketdb:
-#     container_name: basketdb
-#     restart: always
-#     ports:
-#       - "6379:6379"
-
-#   discountdb:
-#     container_name: discountdb
-#     restart: always
-#     environment:
-#       POSTGRES_USER: admin
-#       POSTGRES_PASSWORD: admin1234
-#       POSTGRES_DB: DiscountDb
-#     ports:
-#       - "5432:5432"
-#     volumes:
-#       - postgres_data:/var/lib/postgresql/data/
-
-#   pgadmin:
-#     container_name: pgadmin
-#     restart: always
-#     environment:
-#       PGADMIN_DEFAULT_EMAIL: admin@gmail.com
-#       PGADMIN_DEFAULT_PASSWORD: admin1234
-#     ports:
-#       - "5050:80"
-#     volumes:
-#       - pgadmin_data:/root/.pgadmin
-
-#   portainer:
-#     container_name: portainer
-#     restart: always
-#     ports:
-#       - "8080:8000"
-#       - "9000:9000"
-#     volumes:
-#       - /var/run/docker.sock:/var/run/docker.sock
-#       - portainer_data:/data
-
-#   catalog.api:
-#     container_name: catalog.api
-#     environment:
-#       - ASPNETCORE_ENVIRONMENT=Development
-#       - "DatabaseSettings:ConnectionString=mongodb://catalogdb:27017"
-#     depends_on:
-#       - catalogdb
-#     ports:
-#       - "8000:8080"
-
-#   basket.api:
-#     container_name: basket.api
-#     environment:
-#       - ASPNETCORE_ENVIRONMENT=Development
-#       - "CacheSettings:ConnectionString=basketdb:6379"
-#     depends_on:
-#       - basketdb
-#     ports:
-#       - "8001:8080"
-
 version: '3.4'
 
 services:
+# Catalog DB / Catalog Service / Mongo DB
   catalogdb:
     container_name: catalogdb
     restart: always
@@ -78,13 +9,14 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
-
+# Basket DB / Basket Service / Redis DB
   basketdb:
     container_name: basketdb
     restart: always
     ports:
       - "6379:6379"
 
+# Discount DB / Discount Service / Postgres DB
   discountdb:
     container_name: discountdb
     restart: always
@@ -97,6 +29,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
+# PgAdmin4 / Postgres Management Tool
   pgadmin:
     container_name: pgadmin
     restart: always
@@ -108,6 +41,7 @@ services:
     volumes:
       - pgadmin_data:/root/.pgadmin
 
+# Docker Management Tool
   portainer:
     container_name: portainer
     restart: always
@@ -118,6 +52,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
 
+# Catalog API Service / Depend On Mongo DB
   catalog.api:
     container_name: catalog.api
     environment:
@@ -128,6 +63,7 @@ services:
     ports:
       - "8000:8080"
 
+# Basket API Service / Depend On Redis DB
   basket.api:
     container_name: basket.api
     environment:
@@ -137,3 +73,16 @@ services:
       - basketdb
     ports:
       - "8001:8080" 
+
+# Discount API Service / Depend On Postgres DB
+  discount.api:
+    container_name: discount.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - "DatabaseSettings:ConnectionString=server=discountdb; Port=5432; Database=DiscountDb; User Id = admin; Password=admin1234;"
+    depends_on:
+      - discountdb
+    ports:
+      - "8002:8080"
+

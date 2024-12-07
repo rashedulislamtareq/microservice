@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		Docker Commands.txt = Docker Commands.txt
 		Docker Compose Commands.txt = Docker Compose Commands.txt
 		Mongo Commands.txt = Mongo Commands.txt
+		PostgreSql Commands.txt = PostgreSql Commands.txt
 		Redis Commands.txt = Redis Commands.txt
 	EndProjectSection
 EndProject
