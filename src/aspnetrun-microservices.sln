@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		Documents\Redis Commands.txt = Documents\Redis Commands.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Grpc", "Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{DC151DA5-8475-4E88-B2E2-E281802BB6D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{144EDD66-21BD-48E2-9F34-8861B6E37C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{144EDD66-21BD-48E2-9F34-8861B6E37C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{144EDD66-21BD-48E2-9F34-8861B6E37C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC151DA5-8475-4E88-B2E2-E281802BB6D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC151DA5-8475-4E88-B2E2-E281802BB6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC151DA5-8475-4E88-B2E2-E281802BB6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC151DA5-8475-4E88-B2E2-E281802BB6D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{F6A97BD8-DB91-492D-8A0E-CE29A38404BE} = {02E0EF06-E52E-4847-847B-F99BB97A0A90}
 		{68DF951D-054B-4B38-8CC1-5C4E0A219AD8} = {CEB2ADEB-DBC0-4B55-BAFE-34C4D0E2CE52}
 		{144EDD66-21BD-48E2-9F34-8861B6E37C64} = {68DF951D-054B-4B38-8CC1-5C4E0A219AD8}
+		{DC151DA5-8475-4E88-B2E2-E281802BB6D0} = {68DF951D-054B-4B38-8CC1-5C4E0A219AD8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACDEBD08-BE92-43EE-87EC-8F1D7AE7D911}
