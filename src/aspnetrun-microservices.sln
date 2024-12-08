@@ -11,15 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Cat
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{704E4961-8415-4DE8-A3E1-24385AD8D9F5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{69E6BAB4-D7B0-4D04-B9AC-9F15EA1FE40C}"
-	ProjectSection(SolutionItems) = preProject
-		Docker Commands.txt = Docker Commands.txt
-		Docker Compose Commands.txt = Docker Compose Commands.txt
-		Mongo Commands.txt = Mongo Commands.txt
-		PostgreSql Commands.txt = PostgreSql Commands.txt
-		Redis Commands.txt = Redis Commands.txt
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{02E0EF06-E52E-4847-847B-F99BB97A0A90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{F6A97BD8-DB91-492D-8A0E-CE29A38404BE}"
@@ -27,6 +18,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{68DF951D-054B-4B38-8CC1-5C4E0A219AD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.API", "Services\Discount\Discount.API\Discount.API.csproj", "{144EDD66-21BD-48E2-9F34-8861B6E37C64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{6D346F53-FD2F-4B0F-ACDA-64801A454950}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Docker Commands.txt = Documents\Docker Commands.txt
+		Documents\Docker Compose Commands.txt = Documents\Docker Compose Commands.txt
+		Documents\Mongo Commands.txt = Documents\Mongo Commands.txt
+		Documents\PostgreSql Commands.txt = Documents\PostgreSql Commands.txt
+		Documents\Redis Commands.txt = Documents\Redis Commands.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

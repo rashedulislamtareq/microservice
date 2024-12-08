@@ -14,7 +14,7 @@ namespace Discount.API.Controllers
             _repository = repository;
         }
 
-        [HttpGet("GetDiscount/{productName}")]
+        [HttpGet("{productName}")]
         public async Task<ActionResult<Coupon>> GetDiscount(string productName)
         {
             var coupon = await _repository.GetDiscount(productName);
@@ -35,7 +35,7 @@ namespace Discount.API.Controllers
             return Ok(coupon);
         }
 
-        [HttpDelete("DeleteDiscount/{productName}")]
+        [HttpDelete("{productName}")]
         public async Task<ActionResult<Coupon>> DeleteDiscount(string productName)
         {
             var response = await _repository.DeleteDiscount(productName);
