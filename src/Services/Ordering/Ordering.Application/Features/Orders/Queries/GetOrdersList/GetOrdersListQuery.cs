@@ -11,3 +11,4 @@ public class GetOrdersListQuery : IRequest<List<OrdersVm>>
         UserName = userName;
     }
 }
+ 
